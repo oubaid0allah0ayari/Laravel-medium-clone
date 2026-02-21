@@ -7,15 +7,23 @@ export default {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        "./node_modules/flowbite/**/*.js",
     ],
 
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            colors: {
+                brand: '#2563eb',
+                body: '#6b7280',
+                heading: '#111827',
+                'neutral-secondary': '#f3f4f6',
+                'neutral-secondary-soft': '#f9fafb',
             },
-        },
+            borderRadius: {
+                base: '0.5rem'
+            }
+        }
     },
 
-    plugins: [forms],
+    plugins: [forms, require('flowbite/plugin')],
 };
